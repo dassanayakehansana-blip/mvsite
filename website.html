@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Watch unlimited movies and TV shows on our Netflix-inspired streaming platform">
+    <meta name="keywords" content="streaming, movies, TV shows, Netflix clone, HTML CSS">
+    <title>StreamFlix - Watch Movies & TV Shows Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar" role="banner">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <h1 class="logo" aria-label="StreamFlix Home">STREAMFLIX</h1>
+                <nav class="nav-links" role="navigation" aria-label="Main navigation">
+                    <a href="#home" class="active" aria-current="page">Home</a>
+                    <a href="#series">TV Shows</a>
+                    <a href="#movies">Movies</a>
+                    <a href="#latest">New & Popular</a>
+                    <a href="#mylist">My List</a>
+                </nav>
+            </div>
+            <div class="navbar-right">
+                <div class="search-container">
+                    <label for="search-input" class="search-icon" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        </svg>
+                    </label>
+                    <input type="search" id="search-input" class="search-input" placeholder="Titles, people, genres" aria-label="Search for titles, people, or genres">
+                </div>
+                <div class="profile">
+                    <button class="avatar" aria-label="User profile menu">U</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="hero" role="region" aria-label="Featured content">
+        <div class="hero-content">
+            <h2 class="hero-title">Stranger Things</h2>
+            <div class="hero-buttons">
+                <button class="btn btn-play" aria-label="Play Stranger Things">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    Play
+                </button>
+                <button class="btn btn-info" aria-label="More information about Stranger Things">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                    </svg>
+                    More Info
+                </button>
+            </div>
+            <p class="hero-description">
+                When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.
+            </p>
+            <div class="hero-meta">
+                <span class="match">98% Match</span>
+                <span class="year">2024</span>
+                <span class="rating">16+</span>
+                <span class="seasons">4 Seasons</span>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Movie Rows Section -->
+    <main class="content" role="main">
+        <!-- Trending Now Row -->
+        <section class="movie-row" aria-label="Trending now">
+            <h3 class="row-title">Trending Now</h3>
+            <div class="row-wrapper">
+                <div class="row-container">
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);" role="img" aria-label="The Crown poster">
+                            <div class="rank" aria-hidden="true">1</div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>The Crown</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">95% Match</span>
+                                <span class="duration">6 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);" role="img" aria-label="Breaking Bad poster">
+                            <div class="rank" aria-hidden="true">2</div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Breaking Bad</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">99% Match</span>
+                                <span class="duration">5 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);" role="img" aria-label="Dark poster">
+                            <div class="rank" aria-hidden="true">3</div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Dark</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">92% Match</span>
+                                <span class="duration">3 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);" role="img" aria-label="Squid Game poster">
+                            <div class="rank" aria-hidden="true">4</div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Squid Game</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">97% Match</span>
+                                <span class="duration">1 Season</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);" role="img" aria-label="Money Heist poster">
+                            <div class="rank" aria-hidden="true">5</div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Money Heist</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">94% Match</span>
+                                <span class="duration">5 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);" role="img" aria-label="Bridgerton poster">
+                            <div class="rank" aria-hidden="true">6</div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Bridgerton</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">89% Match</span>
+                                <span class="duration">2 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);" role="img" aria-label="The Witcher poster">
+                            <div class="rank" aria-hidden="true">7</div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>The Witcher</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">91% Match</span>
+                                <span class="duration">3 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular on StreamFlix Row -->
+        <section class="movie-row" aria-label="Popular on StreamFlix">
+            <h3 class="row-title">Popular on StreamFlix</h3>
+            <div class="row-wrapper">
+                <div class="row-container">
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);" role="img" aria-label="Wednesday poster"></div>
+                        <div class="movie-info">
+                            <h4>Wednesday</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">91% Match</span>
+                                <span class="duration">1 Season</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);" role="img" aria-label="The Witcher poster"></div>
+                        <div class="movie-info">
+                            <h4>Ozark</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">93% Match</span>
+                                <span class="duration">4 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #ff6e7f 0%, #bfe9ff 100%);" role="img" aria-label="Peaky Blinders poster"></div>
+                        <div class="movie-info">
+                            <h4>Peaky Blinders</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">96% Match</span>
+                                <span class="duration">6 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);" role="img" aria-label="The Umbrella Academy poster"></div>
+                        <div class="movie-info">
+                            <h4>The Umbrella Academy</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">87% Match</span>
+                                <span class="duration">3 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);" role="img" aria-label="Black Mirror poster"></div>
+                        <div class="movie-info">
+                            <h4>Black Mirror</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">90% Match</span>
+                                <span class="duration">5 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #fdcbf1 0%, #e6dee9 100%);" role="img" aria-label="Succession poster"></div>
+                        <div class="movie-info">
+                            <h4>Succession</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">94% Match</span>
+                                <span class="duration">4 Seasons</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);" role="img" aria-label="The Last of Us poster"></div>
+                        <div class="movie-info">
+                            <h4>The Last of Us</h4>
+                            <div class="movie-stats">
+                                <span class="match-score">98% Match</span>
+                                <span class="duration">1 Season</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Continue Watching Row -->
+        <section class="movie-row" aria-label="Continue watching">
+            <h3 class="row-title">Continue Watching</h3>
+            <div class="row-wrapper">
+                <div class="row-container">
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #48c6ef 0%, #6f86d6 100%);" role="img" aria-label="Narcos poster">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-fill" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Narcos</h4>
+                            <div class="movie-stats">
+                                <span class="episode">S2:E5</span>
+                                <span class="duration">38 min left</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #f77062 0%, #fe5196 100%);" role="img" aria-label="Vikings poster">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-fill" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Vikings</h4>
+                            <div class="movie-stats">
+                                <span class="episode">S4:E12</span>
+                                <span class="duration">52 min left</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #c471f5 0%, #fa71cd 100%);" role="img" aria-label="Lucifer poster">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-fill" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Lucifer</h4>
+                            <div class="movie-stats">
+                                <span class="episode">S3:E9</span>
+                                <span class="duration">12 min left</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #3f2b96 0%, #a8c0ff 100%);" role="img" aria-label="The Office poster">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-fill" style="width: 45%;"></div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>The Office</h4>
+                            <div class="movie-stats">
+                                <span class="episode">S5:E3</span>
+                                <span class="duration">15 min left</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);" role="img" aria-label="Suits poster">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-fill" style="width: 20%;"></div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Suits</h4>
+                            <div class="movie-stats">
+                                <span class="episode">S7:E8</span>
+                                <span class="duration">41 min left</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);" role="img" aria-label="House of Cards poster">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-fill" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>House of Cards</h4>
+                            <div class="movie-stats">
+                                <span class="episode">S2:E11</span>
+                                <span class="duration">28 min left</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card">
+                        <div class="movie-thumbnail" style="background: linear-gradient(135deg, #ffeaa7 0%, #fd79a8 100%);" role="img" aria-label="Friends poster">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-fill" style="width: 55%;"></div>
+                            </div>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Friends</h4>
+                            <div class="movie-stats">
+                                <span class="episode">S9:E4</span>
+                                <span class="duration">22 min left</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" aria-label="Visit our Facebook page">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Visit our Instagram page">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Visit our Twitter page">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Visit our YouTube channel">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="#">Audio and Subtitles</a>
+                <a href="#">Help Center</a>
+                <a href="#">Gift Cards</a>
+                <a href="#">Media Center</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Jobs</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy</a>
+                <a href="#">Legal Notices</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Corporate Information</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <p class="copyright">© 2025 StreamFlix Clone. Built with HTML & CSS only.</p>
+        </div>
+    </footer>
+</body>
+</html>
